@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">RSS Clipboard</string>
+    <string name="accessibility_service_desc">RSS Clipboard background service captures copied text automatically and saves it to your secure vault.</string>
+</resources>
