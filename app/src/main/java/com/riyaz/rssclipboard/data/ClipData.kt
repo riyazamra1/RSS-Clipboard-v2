@@ -52,7 +52,8 @@ class ClipConverters {
 }
 
 object ContentDetector {
-    private val phoneRegex = Regex("^\+?[0-9()\-\s]{7,20}$")
+    // Raw Kotlin string keeps regex backslashes from being parsed as Kotlin escapes.
+    private val phoneRegex = Regex("""^\+?[0-9()\s-]{7,20}$""")
     private val sensitiveKeywords = listOf("password", "secret", "api_key", "bearer", "otp", "token")
 
     fun detectCategory(rawText: String, flaggedSensitive: Boolean = false): ClipCategory {
